@@ -15,7 +15,7 @@ import com.br.Amigurumi.repository.ClienteRepository;
 public class ClienteService {
 
 //	@Autowired
-//	ClienteRepository clienteRepository;
+//	private ClienteRepository clienteRepository;
 //
 //		public Cliente salvar (Cliente cliente) {
 //			return clienteRepository.save(cliente);
