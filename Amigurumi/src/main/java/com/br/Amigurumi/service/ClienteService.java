@@ -14,33 +14,33 @@ import com.br.Amigurumi.repository.ClienteRepository;
 @Service
 public class ClienteService {
 
-	@Autowired
-	ClienteRepository clienteRepository;
-
-		public Cliente salvar (Cliente cliente) {
-			return clienteRepository.save(cliente);
-		}
-		
-		public void deletar (Long id) {
-			clienteRepository.deleteById(id);
-		}
-		
-		public List<Cliente> listarClientes () {
-			return clienteRepository.findAll();
-		}
-		
-		public Cliente buscarPeloCodigo (Long codigo){
-			Cliente clienteSalvo = clienteRepository.findById(codigo).get();
-			if(clienteSalvo != null) {
-				return null;
-			}
-			return clienteSalvo;
-		}
-		
-		public Cliente atualizar (Long codigo, Cliente cliente) {
-			Cliente clienteSalvo = buscarPeloCodigo(codigo);
-			BeanUtils.copyProperties(cliente, clienteSalvo, "IDEN_CLIENTE");
-			return clienteRepository.save(clienteSalvo);
-		}
+//	@Autowired
+//	ClienteRepository clienteRepository;
+//
+//		public Cliente salvar (Cliente cliente) {
+//			return clienteRepository.save(cliente);
+//		}
+//		
+//		public void deletar (Long id) {
+//			clienteRepository.deleteById(id);
+//		}
+//		
+//		public List<Cliente> listarClientes () {
+//			return clienteRepository.findAll();
+//		}
+//		
+//		public Cliente buscarPeloCodigo (Long codigo){
+//			Cliente clienteSalvo = clienteRepository.findById(codigo).get();
+//			if(clienteSalvo != null) {
+//				return null;
+//			}
+//			return clienteSalvo;
+//		}
+//		
+//		public Cliente atualizar (Long codigo, Cliente cliente) {
+//			Cliente clienteSalvo = buscarPeloCodigo(codigo);
+//			BeanUtils.copyProperties(cliente, clienteSalvo, "IDEN_CLIENTE");
+//			return clienteRepository.save(clienteSalvo);
+//		}
 }
  

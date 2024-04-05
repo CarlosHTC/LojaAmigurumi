@@ -11,8 +11,9 @@ public class ClienteResource {
 	@Autowired
 	private ClienteService clienteService;
 	
-	@PostMapping("/salvar")
-	public Cliente salvar(Cliente cliente) {
-		return clienteService.salvar(cliente);
-	}
+//	@PostMapping("/salvar")
+//	public Cliente salvar(Cliente cliente) {
+//		return clienteService.salvar(cliente);
+//	}
+	
 }
