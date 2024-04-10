@@ -11,7 +11,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "CLIENTE")
+@Table(name = "cliente")
 public class Cliente implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
@@ -19,22 +19,19 @@ public class Cliente implements Serializable {
 	@Id
 //	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_Cliente")
 //	@SequenceGenerator(name = "SEQ_Cliente", sequenceName = "cliente", allocationSize = 1)
-	@Column(name = "ID_CLIENTE")
+	@Column(name = "id_cliente", nullable = false)
 	private Long idenCliente;
 	
-	@Column(name = "LOGIN")
-	private String login;
-	
-	@Column(name = "TELEFONE")
+	@Column(name = "telefone")
 	private String telefone;
 	
-	@Column(name = "CPF")
+	@Column(name = "cpf", nullable = false)
 	private String cpf;
 	
-	@Column(name = "NOME_CLIENTE")
+	@Column(name = "nome_cliente", nullable = false)
 	private String nomeCliente;
 
-	@Column(name = "EMAIL")
+	@Column(name = "email")
 	private String email;
 	
 	public Long getIdenCliente() {
@@ -43,14 +40,6 @@ public class Cliente implements Serializable {
 
 	public void setIdenCliente(Long idenCliente) {
 		this.idenCliente = idenCliente;
-	}
-
-	public String getLogin() {
-		return login;
-	}
-
-	public void setLogin(String login) {
-		this.login = login;
 	}
 
 	public String getTelefone() {
