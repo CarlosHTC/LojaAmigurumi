@@ -1,0 +1,22 @@
+{
+  "name": "viewlojaamigurumi",
+  "version": "1.0.0",
+  "description": "Front End da aplicação",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"aplicação rodou\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "Carlos Henrique",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^31.2.0"
+  },
+  "dependencies": {
+    "primeflex": "^3.3.1",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.7.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
