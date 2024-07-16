@@ -8,12 +8,14 @@ const CardLoja = (props) => {
     }    
 
     return (
-        <div className="">
-            <Card>
-                <div>
-                    
+        <div className={colClassCss()}>
+            <Card className={props.cardHeaderClassNames}>
+                <div className='p-grid'>
+                    {props.children}
                 </div>
             </Card>
         </div>
     )
 }
+
+export default CardLoja;
