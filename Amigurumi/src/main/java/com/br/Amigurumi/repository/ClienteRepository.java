@@ -9,9 +9,6 @@ import org.springframework.stereotype.Repository;
 import com.br.Amigurumi.model.Cliente;
 
 @Repository
-public interface ClienteRepository extends JpaRepository<Cliente, Long>{
-	
-	@Query("SELECT c FROM cliente c ")
-	List<Cliente> buscaCliente();
+public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 	
 }

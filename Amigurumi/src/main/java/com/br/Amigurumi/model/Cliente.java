@@ -1,24 +1,22 @@
 package com.br.Amigurumi.model;
 
-import java.io.Serializable;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "cliente")
-public class Cliente implements Serializable {
+public class Cliente {
 	
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;	
 	
 	@Id
-//	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_Cliente")
-//	@SequenceGenerator(name = "SEQ_Cliente", sequenceName = "cliente", allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cliente_seq")
+	@SequenceGenerator(name = "cliente_seq", sequenceName = "cliente_seq", allocationSize = 1)
 	@Column(name = "id_cliente", nullable = false)
 	private Long idenCliente;
 	
@@ -79,6 +77,5 @@ public class Cliente implements Serializable {
 		return "Cliente [idenCliente=" + idenCliente + ", nomeCliente=" + nomeCliente + ", cpf=" + cpf +
 				", email=" + email + ", telefone" + telefone + "]"; 
 	}
-	
 	
 }
