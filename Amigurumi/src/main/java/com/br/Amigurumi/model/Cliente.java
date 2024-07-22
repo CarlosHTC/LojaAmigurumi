@@ -15,8 +15,8 @@ public class Cliente {
 	private static final long serialVersionUID = 1L;	
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cliente_seq")
-	@SequenceGenerator(name = "cliente_seq", sequenceName = "cliente_seq", allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cliente_id_cliente_seq")
+	@SequenceGenerator(name = "cliente_id_cliente_seq", sequenceName = "cliente_id_cliente_seq", allocationSize = 1)
 	@Column(name = "id_cliente", nullable = false)
 	private Long idenCliente;
 	
@@ -32,6 +32,19 @@ public class Cliente {
 	@Column(name = "email")
 	private String email;
 	
+	@Column(name = "senha")
+	private String senha;
+	
+	public Cliente(Long idenCliente, String telefone, String cpf, String nomeCliente, String email, String senha) {
+		super();
+		this.idenCliente = idenCliente;
+		this.telefone = telefone;
+		this.cpf = cpf;
+		this.nomeCliente = nomeCliente;
+		this.email = email;
+		this.senha = senha;
+	}
+
 	public Long getIdenCliente() {
 		return idenCliente;
 	}
@@ -71,11 +84,19 @@ public class Cliente {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
 	@Override
 	public String toString() {
-		return "Cliente [idenCliente=" + idenCliente + ", nomeCliente=" + nomeCliente + ", cpf=" + cpf +
-				", email=" + email + ", telefone" + telefone + "]"; 
+		return "Cliente [idenCliente=" + idenCliente + ", telefone=" + telefone + ", cpf=" + cpf + ", nomeCliente="
+				+ nomeCliente + ", email=" + email + ", senha=" + senha + "]";
 	}
 	
 }
