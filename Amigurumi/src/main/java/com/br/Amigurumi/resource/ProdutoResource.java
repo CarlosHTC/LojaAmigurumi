@@ -11,34 +11,29 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.br.Amigurumi.model.Cliente;
-import com.br.Amigurumi.service.ClienteService;
+import com.br.Amigurumi.model.Produto;
+import com.br.Amigurumi.service.produtoService;
 
 @RestController
-@RequestMapping("/cliente")
-public class ClienteResource {
+@RequestMapping("/produto")
+public class ProdutoResource {
 	
 	@Autowired
-	private ClienteService clienteService;
+	private produtoService produtoService;
 	
 	@PostMapping("/salvar")
-	public Cliente salvar(@RequestBody Cliente cliente) {
-		return clienteService.salvar(cliente);
+	public Produto salvar (@RequestBody Produto produto) {
+		return produtoService.salvar(produto);
 	}
 	
 	@GetMapping("/listar")
-	public List<Cliente> listar() {
-		return clienteService.listarClientes();
+	public List<Produto> listarProdutos() {
+		return produtoService.listarProdutos();
 	}
 	
 	@DeleteMapping("/{id}")
-	public void deletarClientes(@PathVariable Long id) {
-		clienteService.deletar(id);
-	}
-	
-	@GetMapping("/teste")
-	public String teste() {
-		return clienteService.teste();
+	public void deletarProduo(@PathVariable Long id) {
+		produtoService.deletar(id);
 	}
 	
 }

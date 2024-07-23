@@ -35,6 +35,11 @@ public class Cliente {
 	@Column(name = "senha")
 	private String senha;
 	
+	public Cliente() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Cliente(Long idenCliente, String telefone, String cpf, String nomeCliente, String email, String senha) {
 		super();
 		this.idenCliente = idenCliente;
