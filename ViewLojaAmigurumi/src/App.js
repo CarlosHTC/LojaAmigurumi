@@ -1,17 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Homepage from "./components/HomePage";
-import { Teste } from 'primereact/button';
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import Homepage from "./components/HomePage";
+// import { Teste } from 'primereact/button';
 
 const App = () => {
-    <Router>
+    // <Router>
         <div className="p-col-12">
-            <Teste className="p-col-3" label="Home Page" onClick={() => window.location.pathname = '/'} />
-            <Switch>
-                <Route exact path="/" Component={Homepage}/>
-            </Switch>
+            <h1>TESTE</h1>
         </div>
-    </Router>
+    // </Router>
 }
 
 export default App;
