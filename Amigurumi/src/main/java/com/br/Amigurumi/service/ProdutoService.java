@@ -10,7 +10,7 @@ import com.br.Amigurumi.repository.ProdutoRepository;
 
 
 @Service
-public class produtoService {
+public class ProdutoService {
 
 	@Autowired
 	private ProdutoRepository produtoRepository;
